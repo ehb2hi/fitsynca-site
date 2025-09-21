@@ -5,63 +5,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>FitSynca — Usage Guide</title>
     <style>
-      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 40px 16px; color: #1b1f24; line-height: 1.6; }
-      main { max-width: 860px; margin: 0 auto; }
+      :root {
+        --brand: #0ea5e9;
+        --ink: #0f172a;
+        --muted: #64748b;
+        --bg: #f8fafc;
+        --card: #ffffff;
+        --ring: rgba(14, 165, 233, .25);
+      }
+      * { box-sizing: border-box; }
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; color: var(--ink); line-height: 1.6; background: var(--bg); }
+      header { background: linear-gradient(135deg, #0284c7, var(--brand)); color: #fff; padding: 28px 16px; }
+      .wrap { max-width: 980px; margin: 0 auto; padding: 0 12px; }
+      .nav { display: flex; align-items: center; justify-content: space-between; }
+      .brand { font-weight: 700; letter-spacing: .4px; }
+      .links a { color: #e0f2fe; margin-left: 16px; text-decoration: none; }
+      .links a:hover { text-decoration: underline; }
+      main { max-width: 980px; margin: 24px auto 64px; padding: 0 12px; }
+      .card { background: var(--card); border-radius: 14px; box-shadow: 0 6px 24px rgba(15, 23, 42, .06); padding: 24px; }
       h1 { font-size: 1.8rem; margin: 0 0 12px; }
       h2 { font-size: 1.25rem; margin-top: 2rem; }
-      a { color: #0ea5e9; text-decoration: none; }
+      p.lead { margin-top: 0; color: var(--muted); }
+      a { color: var(--brand); text-decoration: none; }
       a:hover { text-decoration: underline; }
       ul { padding-left: 1.25rem; }
       code { background: #f3f4f6; padding: 0 4px; border-radius: 4px; }
+      .section { margin-bottom: 28px; }
+      .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 12px; }
+      .gallery figure { background: var(--card); border-radius: 12px; box-shadow: 0 4px 18px rgba(15,23,42,.06); overflow: hidden; margin: 0; border: 1px solid #eef2f7; }
+      .gallery img { width: 100%; height: auto; display: block; aspect-ratio: 9/16; object-fit: cover; background: #0b1220; }
+      .gallery figcaption { padding: 8px 10px; font-size: .9rem; color: var(--muted); }
     </style>
   </head>
   <body>
-    <main>
-      <h1>FitSynca — Quick Usage Guide</h1>
+    <header>
+      <div class="wrap nav">
+        <div class="brand">FitSynca</div>
+        <nav class="links">
+          <a href="index.html">Home</a>
+          <a href="privacy.html">Privacy</a>
+        </nav>
+      </div>
+    </header>
+    <main class="wrap">
+      <div class="card section">
+        <h1>FitSynca — Quick Usage Guide</h1>
+        <p class="lead">A visual, step‑by‑step overview of the main screens and actions.</p>
+      </div>
       <p>This guide covers the basics of using FitSynca to log workouts and manage your data.</p>
 
-      <h2>Home & Navigation</h2>
-      <ul>
-        <li>Categories: pick <strong>Strength</strong> or <strong>Cardio</strong> exercises from the lists.</li>
-        <li>Bottom banners are ads; your workout data is never sent with ad requests.</li>
-        <li>Use the Back button to return; the app saves only when you tap <strong>Save</strong>.</li>
-      </ul>
+      <section class="card section">
+        <h2>Home & Navigation</h2>
+        <ul>
+          <li>Categories: pick <strong>Strength</strong> or <strong>Cardio</strong> exercises from the lists.</li>
+          <li>Bottom banners are ads; your workout data is never sent with ad requests.</li>
+          <li>Use the Back button to return; the app saves only when you tap <strong>Save</strong>.</li>
+        </ul>
+        <div class="gallery">
+          <figure>
+            <img src="../images/start.png" alt="Start screen" loading="lazy" />
+            <figcaption>Start screen</figcaption>
+          </figure>
+          <figure>
+            <img src="../images/Start_landscape.png" alt="Start screen in landscape" loading="lazy" />
+            <figcaption>Landscape layout</figcaption>
+          </figure>
+          <figure>
+            <img src="../images/dark_maode_start.png" alt="Start screen in dark mode" loading="lazy" />
+            <figcaption>Dark mode</figcaption>
+          </figure>
+        </div>
+      </section>
 
-      <h2>Logging a Workout</h2>
-      <ul>
-        <li>Select an exercise → tap <strong>Add Set</strong>.</li>
-        <li>Strength: enter <em>reps</em> and <em>weight</em>. Cardio: enter <em>minutes</em>, <em>distance</em>, optional extras.</li>
-        <li>Up to 4 sets per exercise entry. Tap <strong>Save Workout</strong> to persist.</li>
-      </ul>
+      <section class="card section">
+        <h2>Logging a Workout</h2>
+        <ul>
+          <li>Select an exercise → tap <strong>Add Set</strong>.</li>
+          <li>Strength: enter <em>reps</em> and <em>weight</em>. Cardio: enter <em>minutes</em>, <em>distance</em>, optional extras.</li>
+          <li>Up to 4 sets per exercise entry. Tap <strong>Save Workout</strong> to persist.</li>
+        </ul>
+        <div class="gallery">
+          <figure>
+            <img src="../images/workout.png" alt="Workout logging screen" loading="lazy" />
+            <figcaption>Workout logging</figcaption>
+          </figure>
+          <figure>
+            <img src="../images/dark_mode_workout.png" alt="Workout logging in dark mode" loading="lazy" />
+            <figcaption>Dark mode logging</figcaption>
+          </figure>
+          <figure>
+            <img src="../images/workout_list.png" alt="Workout list of exercises" loading="lazy" />
+            <figcaption>Exercises list</figcaption>
+          </figure>
+        </div>
+      </section>
 
-      <h2>Custom Exercises</h2>
-      <ul>
-        <li>In the exercise list, tap <strong>Add Exercise</strong> to create your own.</li>
-        <li>Optionally pick an image via the system picker; only the image <em>URI</em> is stored locally.</li>
-      </ul>
+      <section class="card section">
+        <h2>Custom Exercises</h2>
+        <ul>
+          <li>In the exercise list, tap <strong>Add Exercise</strong> to create your own.</li>
+          <li>Optionally pick an image via the system picker; only the image <em>URI</em> is stored locally.</li>
+        </ul>
+        <div class="gallery">
+          <figure>
+            <img src="../images/Profil.png" alt="Profile screen" loading="lazy" />
+            <figcaption>Profile</figcaption>
+          </figure>
+          <figure>
+            <img src="../images/Plan_example.png" alt="Plan example" loading="lazy" />
+            <figcaption>Plan example</figcaption>
+          </figure>
+          <figure>
+            <img src="../images/Settings.png" alt="Settings screen" loading="lazy" />
+            <figcaption>Settings</figcaption>
+          </figure>
+        </div>
+      </section>
 
-      <h2>History</h2>
-      <ul>
-        <li>Open <strong>History</strong> to review past sessions; tap an item to view or edit.</li>
-      </ul>
+      <section class="card section">
+        <h2>History</h2>
+        <ul>
+          <li>Open <strong>History</strong> to review past sessions; tap an item to view or edit.</li>
+        </ul>
+        <div class="gallery">
+          <figure>
+            <img src="../images/History.png" alt="History screen" loading="lazy" />
+            <figcaption>History</figcaption>
+          </figure>
+        </div>
+      </section>
 
-      <h2>Export & Import</h2>
-      <ul>
-        <li><strong>Export</strong>: creates a JSON file via the system file picker — you choose where to store it.</li>
-        <li><strong>Import</strong>: restores from a JSON backup you previously saved.</li>
-        <li>Tip: keep backups in your preferred cloud drive for safety.</li>
-      </ul>
+      <section class="card section">
+        <h2>Export & Import</h2>
+        <ul>
+          <li><strong>Export</strong>: creates a JSON file via the system file picker — you choose where to store it.</li>
+          <li><strong>Import</strong>: restores from a JSON backup you previously saved.</li>
+          <li>Tip: keep backups in your preferred cloud drive for safety.</li>
+        </ul>
+      </section>
 
-      <h2>Privacy</h2>
-      <ul>
-        <li>Your data stays on your device. See the full <a href="privacy.html">Privacy Policy</a>.</li>
-        <li>Ads are served as <em>non‑personalized</em> by default in the first release.</li>
-      </ul>
+      <section class="card section">
+        <h2>Privacy</h2>
+        <ul>
+          <li>Your data stays on your device. See the full <a href="privacy.html">Privacy Policy</a>.</li>
+          <li>Ads are served as <em>non‑personalized</em> by default in the first release.</li>
+        </ul>
+      </section>
 
-      <h2>Support</h2>
-      <ul>
-        <li>Email: <a href="mailto:fitsynca.contact@gmail.com">fitsynca.contact@gmail.com</a></li>
-      </ul>
+      <section class="card section">
+        <h2>Support</h2>
+        <ul>
+          <li>Email: <a href="mailto:fitsynca.contact@gmail.com">fitsynca.contact@gmail.com</a></li>
+        </ul>
+      </section>
     </main>
   </body>
 </html>
