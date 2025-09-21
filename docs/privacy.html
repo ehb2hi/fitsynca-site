@@ -5,69 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>FitSynca — Privacy Policy</title>
     <style>
-      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; color: #1b1f24; line-height: 1.6; }
-      header { background: #0ea5e9; color: white; padding: 24px 16px; }
-      main { max-width: 860px; margin: 0 auto; padding: 24px 16px 64px; }
+      :root {
+        --brand: #0ea5e9;
+        --ink: #0f172a;
+        --muted: #64748b;
+        --bg: #f8fafc;
+        --card: #ffffff;
+      }
+      * { box-sizing: border-box; }
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; color: var(--ink); line-height: 1.6; background: var(--bg); }
+      header { background: linear-gradient(135deg, #0284c7, var(--brand)); color: #fff; padding: 28px 16px; }
+      .wrap { max-width: 980px; margin: 0 auto; padding: 0 12px; }
+      .nav { display: flex; align-items: center; justify-content: space-between; }
+      .brand { font-weight: 700; letter-spacing: .4px; }
+      .links a { color: #e0f2fe; margin-left: 16px; text-decoration: none; }
+      .links a:hover { text-decoration: underline; }
+      main { max-width: 980px; margin: 24px auto 64px; padding: 0 12px; }
+      .card { background: var(--card); border-radius: 14px; box-shadow: 0 6px 24px rgba(15, 23, 42, .06); padding: 24px; }
       h1 { margin: 0 0 8px; font-size: 1.8rem; }
-      h2 { margin-top: 2rem; font-size: 1.25rem; }
-      a { color: #0ea5e9; text-decoration: none; }
+      h2 { margin-top: 1.5rem; font-size: 1.25rem; }
+      a { color: var(--brand); text-decoration: none; }
       a:hover { text-decoration: underline; }
       ul { padding-left: 1.25rem; }
-      footer { border-top: 1px solid #e5e7eb; color: #6b7280; font-size: .9rem; padding-top: 16px; margin-top: 32px; }
+      footer { text-align: center; color: var(--muted); font-size: .9rem; margin-top: 32px; }
+      .meta { color: #e0f2fe; opacity: .95; }
     </style>
   </head>
   <body>
     <header>
-      <h1>FitSynca — Privacy Policy</h1>
-      <div>Last updated: 2025-09-11</div>
+      <div class="wrap nav">
+        <div>
+          <div class="brand">FitSynca — Privacy Policy</div>
+          <div class="meta">Last updated: 2025-09-11</div>
+        </div>
+        <nav class="links">
+          <a href="index.html">Home</a>
+          <a href="usage.html">Usage</a>
+        </nav>
+      </div>
     </header>
-    <main>
-      <p>FitSynca is an offline-first workout tracker. We do not collect, share, or transmit your personal data to our servers. Your data remains on your device unless you explicitly export or share it using your device’s system share features.</p>
+    <main class="wrap">
+      <section class="card">
+        <p>FitSynca is an offline-first workout tracker. We do not collect, share, or transmit your personal data to our servers. Your data remains on your device unless you explicitly export or share it using your device’s system share features.</p>
 
-      <h2>What We Store (On Your Device)</h2>
-      <ul>
-        <li>Exercises and workouts (sessions, sets, basic metadata) in a local Room database.</li>
-        <li>Optional custom exercise images selected by you (we store a local URI reference, not the image content itself).</li>
-        <li>App settings (theme and basic preferences) via Android DataStore.</li>
-      </ul>
+        <h2>What We Store (On Your Device)</h2>
+        <ul>
+          <li>Exercises and workouts (sessions, sets, basic metadata) in a local Room database.</li>
+          <li>Optional custom exercise images selected by you (we store a local URI reference, not the image content itself).</li>
+          <li>App settings (theme and basic preferences) via Android DataStore.</li>
+        </ul>
 
-      <h2>Network and Analytics</h2>
-      <ul>
-        <li>Ads: The app may request network resources to load advertisements (Google Mobile Ads SDK). Ad requests do not include your workout data.</li>
-        <li>No analytics SDKs and no custom telemetry beyond what the ads SDK performs for ad delivery and measurement.</li>
-      </ul>
+        <h2>Network and Analytics</h2>
+        <ul>
+          <li>Ads: The app may request network resources to load advertisements (Google Mobile Ads SDK). Ad requests do not include your workout data.</li>
+          <li>No analytics SDKs and no custom telemetry beyond what the ads SDK performs for ad delivery and measurement.</li>
+        </ul>
 
-      <h2>Backups and Import</h2>
-      <ul>
-        <li>You can export your data to a JSON file using the system file picker. You choose where to store the file (device, cloud provider app, etc.).</li>
-        <li>You can import data from a JSON backup you previously saved.</li>
-        <li>We do not receive or access your backups.</li>
-      </ul>
+        <h2>Backups and Import</h2>
+        <ul>
+          <li>You can export your data to a JSON file using the system file picker. You choose where to store the file (device, cloud provider app, etc.).</li>
+          <li>You can import data from a JSON backup you previously saved.</li>
+          <li>We do not receive or access your backups.</li>
+        </ul>
 
-      <h2>Permissions</h2>
-      <ul>
-        <li>Photos/Media: used only to let you pick an image for a custom exercise using the system picker. The app stores a URI to the selected image.</li>
-        <li>No location, contacts, or sensor data is collected.</li>
-      </ul>
+        <h2>Permissions</h2>
+        <ul>
+          <li>Photos/Media: used only to let you pick an image for a custom exercise using the system picker. The app stores a URI to the selected image.</li>
+          <li>No location, contacts, or sensor data is collected.</li>
+        </ul>
 
-      <h2>Data Removal</h2>
-      <ul>
-        <li>In-app delete actions remove the corresponding records.</li>
-        <li>Uninstalling the app removes all app data stored on the device.</li>
-      </ul>
+        <h2>Data Removal</h2>
+        <ul>
+          <li>In-app delete actions remove the corresponding records.</li>
+          <li>Uninstalling the app removes all app data stored on the device.</li>
+        </ul>
 
-      <h2>Children’s Privacy</h2>
-      <p>FitSynca is intended for general audiences and does not target children. We do not knowingly collect personal data from children.</p>
+        <h2>Children’s Privacy</h2>
+        <p>FitSynca is intended for general audiences and does not target children. We do not knowingly collect personal data from children.</p>
 
-      <h2>Changes to This Policy</h2>
-      <p>We may update this policy from time to time. Material changes will be reflected here with an updated date.</p>
+        <h2>Changes to This Policy</h2>
+        <p>We may update this policy from time to time. Material changes will be reflected here with an updated date.</p>
 
-      <h2>Contact</h2>
-      <p>Questions or privacy requests: <a href="mailto:fitsynca.contact@gmail.com">fitsynca.contact@gmail.com</a></p>
-
-      <footer>
-        <div>&copy; 2025 FitSynca</div>
-      </footer>
+        <h2>Contact</h2>
+        <p>Questions or privacy requests: <a href="mailto:fitsynca.contact@gmail.com">fitsynca.contact@gmail.com</a></p>
+      </section>
+      <footer>&copy; <span id="y"></span> FitSynca</footer>
     </main>
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
   </body>
   </html>
