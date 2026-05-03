@@ -50,17 +50,17 @@
     <main class="wrap">
       <div class="card section">
         <h1>FitSynca — Quick Usage Guide</h1>
-        <p class="lead">A visual, step‑by‑step overview of the main screens and actions.</p>
+        <p class="lead">A visual, step-by-step overview of the current app screens and core actions.</p>
       </div>
-      <p>This guide covers the basics of using FitSynca to log workouts and manage your data.</p>
+      <p>This guide covers the basics of using FitSynca to manage plans, log workouts, review stats, and back up your data.</p>
 
       <section class="card section">
         <h2>Home & Navigation</h2>
         <ul>
-          <li>Home: browse categories to start a <strong>Strength</strong> or <strong>Cardio</strong> session quickly.</li>
-          <li>Stats tab: review weekly calories, active minutes, strength volume, and streaks at a glance.</li>
-          <li>Bottom banners are ads; your workout data is never sent with ad requests.</li>
-          <li>Use the Back button to return; the app saves only when you tap <strong>Save</strong>.</li>
+          <li>Home: browse muscle groups and jump into your saved <strong>Favorite Workouts</strong> for faster access.</li>
+          <li>The bottom navigation gives direct access to <strong>Plans</strong>, <strong>Home</strong>, <strong>Stats</strong>, <strong>History</strong>, and <strong>Settings</strong>.</li>
+          <li>Use the profile icon in the top-right corner to switch or manage profiles.</li>
+          <li>Stats helps you review weekly activity and body progress at a glance.</li>
         </ul>
         <div class="gallery">
           <figure>
@@ -68,12 +68,12 @@
             <figcaption>Home screen</figcaption>
           </figure>
           <figure>
-            <img src="images/Stats.jpeg" alt="Stats dashboard" loading="lazy" />
-            <figcaption>Weekly stats</figcaption>
+            <img src="images/favorite_workouts.jpeg" alt="Favorite workouts screen" loading="lazy" />
+            <figcaption>Favorite workouts</figcaption>
           </figure>
           <figure>
-            <img src="images/Darkthem.jpeg" alt="Home screen in dark mode" loading="lazy" />
-            <figcaption>Dark mode</figcaption>
+            <img src="images/Stats.jpeg" alt="Stats dashboard" loading="lazy" />
+            <figcaption>Weekly stats</figcaption>
           </figure>
         </div>
       </section>
@@ -81,46 +81,60 @@
       <section class="card section">
         <h2>Logging a Workout</h2>
         <ul>
-          <li>Select an exercise → tap <strong>Add Set</strong>.</li>
-          <li>Strength: enter <em>reps</em> and <em>weight</em>. Cardio: enter <em>minutes</em>, <em>distance</em>, optional extras.</li>
-          <li>Up to 4 sets per exercise entry. Tap <strong>Save Workout</strong> to persist.</li>
-          <li>Need another move? Use <strong>Add Exercise</strong> to create a custom entry — everything stays on device.</li>
+          <li>Open an exercise from Home, Favorites, or a Plan session to start logging.</li>
+          <li>Strength entries support quick weight adjustments and rep tracking directly on the exercise screen.</li>
+          <li>Use <strong>Add Set</strong> to add more entries, then tap <strong>Save Workout</strong> to persist the session.</li>
+          <li>You can keep common exercises pinned in favorites for quicker repeat logging.</li>
         </ul>
         <div class="gallery">
           <figure>
+            <img src="images/workout_content.jpeg" alt="Exercise details and logging controls" loading="lazy" />
+            <figcaption>Exercise detail and logging</figcaption>
+          </figure>
+          <figure>
             <img src="images/Add_new_workout.jpeg" alt="Adding a workout set" loading="lazy" />
-            <figcaption>Add set with timer</figcaption>
+            <figcaption>Add a new set</figcaption>
           </figure>
           <figure>
             <img src="images/workouts.jpeg" alt="Logged workout summary" loading="lazy" />
             <figcaption>Logged workout summary</figcaption>
           </figure>
+        </div>
+      </section>
+
+      <section class="card section">
+        <h2>Training Plans</h2>
+        <ul>
+          <li>Create structured plans with multiple sessions and track progress as you complete exercises.</li>
+          <li>The <strong>Day Calendar</strong> view lets you move sessions to specific dates and work through them from the schedule.</li>
+          <li>Plan progress, history, and stats stay scoped to the active profile.</li>
+        </ul>
+        <div class="gallery">
           <figure>
-            <img src="images/Darkthem.jpeg" alt="Workout logging in dark theme" loading="lazy" />
-            <figcaption>Dark theme logging</figcaption>
+            <img src="images/Plan.jpeg" alt="Training plan overview" loading="lazy" />
+            <figcaption>Plan overview</figcaption>
+          </figure>
+          <figure>
+            <img src="images/Plan_Calendar.jpeg" alt="Training plan day calendar" loading="lazy" />
+            <figcaption>Day calendar</figcaption>
           </figure>
         </div>
       </section>
 
       <section class="card section">
-        <h2>Training plans &amp; profiles</h2>
+        <h2>Profiles</h2>
         <ul>
-          <li>Create detailed plans with sets and targets, then check them off as you train.</li>
-          <li>Switch profiles to keep individual weight, unit preferences, and stats per athlete.</li>
-          <li>Plans, history, and stats stay scoped to the active profile.</li>
+          <li>Use multiple profiles to separate athlete data, weight units, and progress tracking.</li>
+          <li>Edit profile details like age, height, weight, BMI, and notes to keep body analytics current.</li>
         </ul>
         <div class="gallery">
           <figure>
-            <img src="images/Plan_list.jpeg" alt="Training plan list" loading="lazy" />
-            <figcaption>Plan overview</figcaption>
+            <img src="images/profiles.jpeg" alt="Profile list" loading="lazy" />
+            <figcaption>Profile list</figcaption>
           </figure>
           <figure>
-            <img src="images/Plan.jpeg" alt="Training plan detail" loading="lazy" />
-            <figcaption>Plan detail</figcaption>
-          </figure>
-          <figure>
-            <img src="images/profiles.jpeg" alt="Profile selection" loading="lazy" />
-            <figcaption>Profiles</figcaption>
+            <img src="images/edit_profile.jpeg" alt="Edit profile screen" loading="lazy" />
+            <figcaption>Edit profile</figcaption>
           </figure>
         </div>
       </section>
@@ -142,7 +156,8 @@
         <h2>Export & Import</h2>
         <ul>
           <li><strong>Export</strong>: creates a JSON file via the system file picker — you choose where to store it.</li>
-          <li><strong>Import</strong>: restores from a JSON backup you previously saved.</li>
+          <li><strong>Import (append)</strong>: adds backup content to your existing data.</li>
+          <li><strong>Import (replace)</strong>: overwrites current app data with the selected backup.</li>
           <li>Tip: keep backups in your preferred cloud drive for safety.</li>
         </ul>
         <div class="gallery">
